@@ -1,0 +1,21 @@
+/*this section determines how row contained inside the main div will appear*/
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+/*this section determines how the 'block' defined below will appear together in a row*/
+.container .rowel{
+    display: flex;
+    flex: 1;
+    gap: 5px;
+}
+
+/* this section determines how each single block will appear */
+.container .colel{
+    border: 2px solid blue;
+    flex:1; 
+    padding: 10px;
+}
