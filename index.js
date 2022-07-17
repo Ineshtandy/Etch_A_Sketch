@@ -1,25 +1,54 @@
 let container = document.querySelector(".container");
+let btn = document.querySelector("#btn-el");
+btn.addEventListener("click",takeInput);
+let n = 16;
 
-for(let i =0;i<16;i++){
+// for(let i =0;i<n;i++){
 
-  let rowdiv = document.createElement("div");
-  rowdiv.setAttribute("class","rowel");
+//   let rowdiv = document.createElement("div");
+//   rowdiv.setAttribute("class","rowel");
 
-  for(let j=0;j<16;j++){
+//   for(let j=0;j<n;j++){
 
-    let sqdiv = document.createElement("div");
-    sqdiv.setAttribute("class","colel");
-    sqdiv.textContent = i+" "+j;
-    rowdiv.appendChild(sqdiv);
+//     let sqdiv = document.createElement("div");
+//     sqdiv.setAttribute("class","colel");
+//     sqdiv.textContent = i+" "+j;
+//     rowdiv.appendChild(sqdiv);
 
-    /*sqdiv.addEventListener("mouseover",hover);*/
+//     /*sqdiv.addEventListener("mouseover",hover);*/
     
 
-  }
-  container.appendChild(rowdiv);
+//   }
+//   container.appendChild(rowdiv);
+// }
+
+function takeInput(){
+  n = prompt("enter size of square matrix");
+  printing();
 }
 
 //this is constantly adding colour
 /*function hover(){
   this.setAttribute("style","background-color:green;");
 }*/
+
+function printing(){
+  for(let i =0;i<n;i++){
+
+    let rowdiv = document.createElement("div");
+    rowdiv.setAttribute("class","rowel");
+  
+    for(let j=0;j<n;j++){
+  
+      let sqdiv = document.createElement("div");
+      sqdiv.setAttribute("class","colel");
+      sqdiv.textContent = i+" "+j;
+      rowdiv.appendChild(sqdiv);
+  
+      /*sqdiv.addEventListener("mouseover",hover);*/
+      
+  
+    }
+    container.appendChild(rowdiv);
+  }
+}
