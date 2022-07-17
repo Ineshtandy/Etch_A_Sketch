@@ -24,6 +24,7 @@ let n = 16;
 
 function takeInput(){
   n = prompt("enter size of square matrix");
+  container.innerHTML="";
   printing();
 }
 
